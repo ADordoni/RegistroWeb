@@ -1,0 +1,55 @@
+﻿@model IEnumerable<RegistroWeb.Models.Persona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <table class="table">
+            <tr>
+                <th>
+                    DNI
+                </th>
+                 <th>
+                    Nombre y apellido
+                </th>
+                 <th>
+                    Domicilio
+                </th>
+                 <th>
+                    Fecha de nacimiento
+                </th>
+            </tr>
+            @foreach(var Persona in Model)
+            {
+              <tr>
+                <td>
+                    @Persona.dni
+                </td>
+                <td>
+                    @Persona.nombre
+                </td>
+                <td>
+                    @Persona.domicilio
+                </td>
+                <td>
+                    @Persona.fecha
+                </td>
+                <td>
+                    <a href="/Home/Modificacion?dni=@Persona.dni">Modificar</a>
+                </td>
+                <td>
+                    <a href="/Home/Baja?dni=@Persona.dni">Borrar</a>
+                </td>                
+              </tr>
+            }
+        </table>
+        <a href="/Home/Alta">Agregar</a>
+    </body>
+</html>

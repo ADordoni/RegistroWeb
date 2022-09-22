@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RegistroWeb.Models.Persona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/Alta">
+            DNI:
+            <input type="text" name="DNI" />
+            <br />
+            Nombre:
+            <input type="text" name="nombre" />
+            <br />
+            Domicilio:
+            <input type="text" name="domicilio" />
+            <br />
+             Fecha:
+            <input type="date" name="fecha" />
+            <br />
+            <input type="submit" name="confirmar" />
+        </form>
+    </div>
+</body>
+</html>
+

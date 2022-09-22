@@ -1,0 +1,33 @@
+﻿@model RegistroWeb.Models.Persona
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/Modificacion">
+            DNI:
+            <input type="text" name="DNI" value = "@Model.dni" />
+            <br />
+            Nombre:
+            <input type="text" name="nombre" value = "@Model.nombre" />
+            <br />
+            Domicilio:
+            <input type="text" name="domicilio" value ="@Model.domicilio"/>
+            <br />
+             Fecha:
+            <input type="datetime-local" name="fecha" value="@Model.fecha" />
+            <br />
+            <input type="submit" name="confirmar" />
+        </form>
+    </div>
+</body>
+</html>
+
